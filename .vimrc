@@ -75,3 +75,7 @@ set ruler
 
 " Disable auto-adding comments to new lines
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Shortcut for navigating buffer list
+nnoremap <silent> <C-PageDown> :bprevious<CR>
+nnoremap <silent> <C-PageUp> :bnext<CR>
