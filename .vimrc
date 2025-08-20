@@ -4,6 +4,9 @@
 
 call plug#begin('~/.vim/plugged')
 
+" LSP Client
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Rust basics: syntax, indent, :RustFmt
 Plug 'rust-lang/rust.vim'
 
@@ -11,8 +14,8 @@ Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
 
 " Fuzzy file find; requires 'sudo apt install fzf'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf'
+" Plug 'junegunn/fzf.vim'
 
 " Gruvbox color scheme
 Plug 'morhetz/gruvbox'
@@ -20,8 +23,6 @@ Plug 'morhetz/gruvbox'
 " Remember to run :PlugInstall after installing vim-plug
 
 call plug#end()
-
-
 
 " Use Gruvbox color scheme
 syntax enable
@@ -79,3 +80,14 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Shortcut for navigating buffer list
 nnoremap <silent> <C-PageDown> :bprevious<CR>
 nnoremap <silent> <C-PageUp> :bnext<CR>
+
+" COC autocomplete behavior ------------------
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+" COC LSP keymaps ------------------
+" Go to definition / references
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
+
+" FZF
+nnoremap <C-p> :Files<CR>
