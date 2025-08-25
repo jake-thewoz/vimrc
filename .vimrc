@@ -10,6 +10,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Rust basics: syntax, indent, :RustFmt
 Plug 'rust-lang/rust.vim'
 
+" Svelte syntax highlighting
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
+" Plugins for general web dev
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'othree/html5.vim'
+
 "Git, for commiting
 Plug 'tpope/vim-fugitive'
 
