@@ -18,7 +18,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'othree/html5.vim'
 
-"Git, for commiting
+" Git, for commiting
+Plug 'tpope/vim-fugitive'
+
+" Make comments with gcc 
 Plug 'tpope/vim-commentary'
 
 " Fuzzy file find; requires 'sudo apt install fzf'
@@ -27,9 +30,6 @@ Plug 'tpope/vim-commentary'
 
 " Gruvbox color scheme
 Plug 'morhetz/gruvbox'
-
-" Comment plugin
-Plug 'preservim/nerdcommenter'
 
 " Remember to run :PlugInstall after installing vim-plug
 
@@ -87,12 +87,6 @@ set linebreak
 " Set a status line (optional)
 set laststatus=2
 set ruler
-
-" Map Ctrl+/ to toggle comments
-nmap <C-_> <Plug>NERDCommenterTogle
-vmap <C-_> <Plug>NERDCommenterTogle
-nmap <C-/> <Plug>NERDCommenterTogle
-vmap <C-/> <Plug>NERDCommenterTogle
 
 " Disable auto-adding comments to new lines
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
