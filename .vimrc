@@ -104,4 +104,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 
 " FZF
-nnoremap <C-p> :Files<CR>
+" nnoremap <C-p> :Files<CR>
+
+" Show git blame for current buffer
+nnoremap <silent> gb :Git blame<CR>
