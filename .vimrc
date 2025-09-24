@@ -108,3 +108,22 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Show git blame for current buffer
 nnoremap <silent> gb :Git blame<CR>
+
+" Syntax for condarc
+autocmd BufRead,BufNewFile .condarc set filetype=yaml
+
+" Map F5 to toggle indentation settings
+" detects current shiftwidth and sets it to the opposite
+nnoremap <F5> :call ToggleIndentation()<CR>
+
+function! ToggleIndentation()
+    if &shiftwidth == 4
+        " switch to 2
+        set tabstop=2 shiftwidth=2 softtabstop=2
+        echo "Indentation set to 2 spaces"
+    else
+        " switch to 4
+        set tabstop=4 shiftwidth=4 softtabstop=4
+        echo "Indentation set to 4 spaces"
+    endif
+endfunction
