@@ -51,6 +51,10 @@ set t_vb=
 set number
 set relativenumber
 
+" Set better search defaults
+set ignorecase
+set smartcase
+
 " Better experience for tabs and indentation
 set tabstop=4       " Number of spaces that a tab counts for
 set shiftwidth=4    " Number of spaces to use for each step of (auto)indent
